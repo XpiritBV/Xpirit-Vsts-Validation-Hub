@@ -53,7 +53,7 @@
     "contributions": [
         {
             "id": "Validation.Hub",
-            "type": "ms.vss-web.hub",
+            "type": "ms.vss-web.pivot",
             "description": "adds Validation to the release Hub",
             "targets": [
                 "ms.vss-releaseManagement-web.hub-group-rm"

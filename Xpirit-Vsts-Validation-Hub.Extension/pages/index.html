@@ -7,6 +7,23 @@
  <body>
      <script type="text/javascript">VSS.init();</script>
      <h1>Hello Validation Hub</h1>
-     <script type="text/javascript">VSS.notifyLoadSucceeded();</script>
+     <p id="testcontent"></p>
+     
+     <script>
+         
+        VSS.init({explicitNotifyLoaded: true, usePlatformScripts: true, usePlatformStyles: true })
+
+        // Show context info when ready
+        VSS.ready(function () {
+            var context = VSS.getWebContext();
+            var configuration = VSS.getConfiguration();
+            document.getElementById("testcontent").textContent = "Hello Jasper";
+
+           
+            VSS.notifyLoadSucceeded();
+        });
+
+    
+         </script>
  </body>
  </html>
