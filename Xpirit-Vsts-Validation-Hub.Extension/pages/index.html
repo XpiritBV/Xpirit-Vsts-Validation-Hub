@@ -12,7 +12,7 @@
      <script>
          
          function getFile(file){
-             var url = window.location.replace("index.html",file);
+             var url = document.location.href.replace("index.html",file);
              
              var client = new XMLHttpRequest();
             client.open('GET', url);
