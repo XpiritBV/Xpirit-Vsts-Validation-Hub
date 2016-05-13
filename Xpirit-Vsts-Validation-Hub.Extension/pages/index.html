@@ -11,13 +11,26 @@
      
      <script>
          
+         function getFile(file){
+             var url = "https://jaspergilhuis.gallery.vsassets.io/_apis/public/gallery/publisher/jaspergilhuis/extension/JasperGilhuis-Xpirit-Vsts-Validation-Hub-expirimental/0.1.32/privateasset/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwbiI6Imphc3BlcmdpbGh1aXMiLCJlbiI6Ikphc3BlckdpbGh1aXMtWHBpcml0LVZzdHMtVmFsaWRhdGlvbi1IdWItZXhwaXJpbWVudGFsIiwiZXhwIjoiMTQ2Mzc0NzU4MyJ9.enpycWVLN3ZsRUQwNkNybjRyS3JmL2d1Yi9zZDhTb0U1OTZzdXlKaWFnbz0=/Xpirit-Vsts-Validation-Hub.Extension/pages/"+file;
+             
+             var client = new XMLHttpRequest();
+            client.open('GET', url);
+            client.onreadystatechange = function() {
+                var content = client.responseText;
+                document.getElementById("testcontent").textContent = content;
+            }
+            client.send();
+
+             return "dsadas __TOKEN__ Sdasdasdas"
+         }
         VSS.init({explicitNotifyLoaded: true, usePlatformScripts: true, usePlatformStyles: true })
 
         // Show context info when ready
         VSS.ready(function () {
             var context = VSS.getWebContext();
             var configuration = VSS.getConfiguration();
-            document.getElementById("testcontent").textContent = "Hello Jasper";
+             getfile("tokenfile.cs");
 
            
             VSS.notifyLoadSucceeded();
