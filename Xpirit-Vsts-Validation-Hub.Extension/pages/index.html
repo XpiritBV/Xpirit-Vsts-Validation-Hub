@@ -12,7 +12,8 @@
      <script>
          
          function getFile(file){
-             var url = "https://jaspergilhuis.gallery.vsassets.io/_apis/public/gallery/publisher/jaspergilhuis/extension/JasperGilhuis-Xpirit-Vsts-Validation-Hub-expirimental/0.1.32/privateasset/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwbiI6Imphc3BlcmdpbGh1aXMiLCJlbiI6Ikphc3BlckdpbGh1aXMtWHBpcml0LVZzdHMtVmFsaWRhdGlvbi1IdWItZXhwaXJpbWVudGFsIiwiZXhwIjoiMTQ2Mzc0NzU4MyJ9.enpycWVLN3ZsRUQwNkNybjRyS3JmL2d1Yi9zZDhTb0U1OTZzdXlKaWFnbz0=/Xpirit-Vsts-Validation-Hub.Extension/pages/"+file;
+             var baseurl = document.
+             var url = window.location.replace("index.html",file);
              
              var client = new XMLHttpRequest();
             client.open('GET', url);
